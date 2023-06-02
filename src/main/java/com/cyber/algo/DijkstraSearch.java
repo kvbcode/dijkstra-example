@@ -10,15 +10,6 @@ public class DijkstraSearch {
     final Map<String, String> vertexParentMap = new HashMap<>();
     final Set<String> vertices = new HashSet<>();
 
-    /*
-     Поиск в ширину для заполнения весов узлов
-     Найти узел с наименьшей стоимостью среди необработанных
-     Перебрать соседей текущего узла
-     Если к соседу проще добраться через текущий узел:
-       Обновляем вес соседа
-       Текущий узел становится родителем для соседа
-       Отмечаем текущий узел как обработанный
-     */
     public void bfs(Map<String, Set<Arc>> graph, String startNode) {
         reset(graph.keySet(), startNode);
 
